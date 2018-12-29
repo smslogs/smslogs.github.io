@@ -19,19 +19,6 @@
 	  	firebase.auth().signOut();
 	  });
   
-	  // Add a realtime listener
-	 //firebase.auth().onAuthStateChanged(firebaseUser => {
-	  	//if(firebaseUser){
-			//console.log(firebaseUser);
-		//}
-			//else {
-				//console.log('Not logged in');
-				//window.location="Web Interface.html";
-			//}
-		
-	  //});
-  
-  
 }());
 
 function dropOptions(){
