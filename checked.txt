@@ -1,0 +1,12 @@
+<script>
+function checkCreate(info) {
+   var ad = document.getElementById("ad");
+   var re = document.getElementById("re");
+   if(ad == checked && re == checked){
+   	alert("Error! You have both checkboxes checked.");
+   }
+   else {
+   	
+   }
+   }
+</script>

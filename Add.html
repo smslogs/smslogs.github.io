@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Add.css">
+<head>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<title>Menu</title>
+</head>
+
+<div class="topnav">
+  <a href="Menu.html">View</a>
+  <a class="active" href="Add.html">Add</a>
+  <a href="AddUser.html">Add-To-User</a>
+  <a href="Delete.html">Delete</a>
+  <a href="userList.html">User List</a>
+  <a href="questionList.html">Question List</a>
+  <a id="out">Sign Out</a> 
+</div> 
+
+<center><h1>Create New Questions</h1></center>
+<body>
+
+<br>
+<div style="display: flex; align-items: center; justify-content: center;">
+    <h4 >Question Name: </h4> 
+    <input style="margin-left: 20px; width: 20%; height: 30px" id="question_name">
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <h4 style="margin-right: 20px">Question:</h4> 
+    <textarea rows="2" cols="10" id="question" style="width: 50%"></textarea> 
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <h4 style="margin-right: 20px">Question Type:</h4> 
+    <center><select id="selection" onchange="dropOptions()">
+        <option value="open">Open-ended</option>
+        <option value="picker">Message Picker</option>
+        <option value="multiple">Multiple Choise</option>
+        <option value="scale">Licker Scale</option>
+        <option value="emoji">Emoji</option>
+      </select>
+      </center>
+</div>
+
+
+
+<div id="view_multiple" style="width: 100%; flex-direction: row; display: none">
+    <h4 style="margin-left: 300px">Multiple Choice:</h4> 
+    <input style="width: 50%; margin-left: 300px" placeholder="Separate the answers with a backslash (/)" id="answers">
+</div>
+
+<div id="view_scale" style="display: none">
+    <h4 style="margin-left: 300px">Scale Size:</h4>
+    <input style="width: 10%; margin-left: 300px" placeholder="e.g. 5" id="size">
+</div>
+
+<div id="view_message" style="display: none">
+    <h4 style="text-align: center">Message Picker: Please follow this format: (YYYY-MM-DD)</h4>
+    <div style="display: flex; align-items: center; justify-content: center;">
+    <p style="margin-right: 10px">Starting Date:</p>
+      <input id="start" style="width: 100px; margin-right: 40px">
+      <p style="margin-right: 10px">Ending Date:</p>
+      <input id="end"style="width: 100px">
+    </div>
+</div>
+
+<div style="margin-top: 20px; display: flex; align-items: center; justify-content: center;">
+    <h4 style="margin-right: 20px">Question sensitiveness:</h3>
+    <center ><select id="sensitive" onchange="dropOptions()">
+        <option value="non-sen">Non-Sensitive</option>
+        <option value="sen">Sensitive</option> 
+      </select>
+    </center>
+</div>
+
+    
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <button onclick="submit()" style="margin-top: 40px; font-size: 24px;">Submit</button>
+</div>
+
+
+<script src="Add.js"></script>
+
+</body>
+</html>

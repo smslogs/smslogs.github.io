@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Menu.css">
+<head>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<title>Menu</title>
+</head>
+
+<body>
+<div class="topnav">
+  <a class="active" href="Menu.html">View</a>
+  <a href="Add.html">Add</a>
+  <a href="AddUser.html">Add-To-User</a>
+  <a href="Delete.html">Delete</a>
+  <a href="userList.html">User List</a>
+  <a href="questionList.html">Question List</a>
+  <a id="out">Sign Out</a> 
+</div> 
+
+<center><h1>Analytics</h1></center>
+<br>
+<div class="container">
+<p class="align-right-text"><b>Question: <input placeholder="Question" id="question"></b></p>
+<p class="align-left-text"><b>User ID: <input placeholder="ID" id="id"></b></p>
+</div>
+<br>
+<button style="
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;" onclick="submit()">Submit</button>
+
+<br>
+<center><h3>Data:</h3></center>
+
+<center><div id="text"></div></center>
+
+<script src="Menu.js"></script>
+
+</body>
+</html>

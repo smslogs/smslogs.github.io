@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Menu.css">
+<head>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<title>Menu</title>
+</head>
+
+<div class="topnav">
+  <a href="Menu.html">View</a>
+  <a href="Add.html">Add</a>
+  <a href="AddUser.html">Add-To-User</a>
+  <a class="active" href="Delete.html">Delete</a>
+  <a href="userList.html">User List</a>
+  <a href="questionList.html">Question List</a>
+  <a id="out">Sign Out</a> 
+</div> 
+
+<center><h1>Delete Questions</h1></center>
+<body>
+<br>
+
+<center><div id="list"></div></center>
+
+<div class="container">
+<br><br>
+<center><p><b>Enter or copy and paste the question you would like to remove from the database:</b></p></center>
+<center><input id="que" style="width: 500px;"></center>
+</div>
+<br>
+<button style="
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+	position: absolute;" onclick="submit()">Submit</button>
+<br><br><br>
+
+<p><b>Note: </b>If nothing happens when you submit, you are writing the question incorrectly.</p>
+
+<script src="Delete.js"></script>
+
+</body>
+</html>
