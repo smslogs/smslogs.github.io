@@ -63,6 +63,24 @@ function errData(err){
   
 }());
 
+function download(content, fileName, contentType) {
+	var a = document.createElement("a");
+	var file = new Blob([content], {type: contentType});
+	a.href = URL.createObjectURL(file);
+	a.download = fileName;
+	a.click();
+}
+
+function getCSV() {
+	console.log("Something")
+	database.ref('Users').once('value', function(snap){
+		//console.log(JSON.stringify(snap.val()))
+		download(JSON.stringify(snap.val()), 'json.txt', 'text/plain');
+	})
+}
+
+
+
 function submit() {
 	var id = document.getElementById("id").value;
 	var que = document.getElementById("question").value;
